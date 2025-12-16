@@ -12,6 +12,20 @@ Bu proje, yapay zeka destekli bir kitap öneri sistemidir. Kullanıcının girdi
 - **Kategori Filtreleme:** Belirli kitap kategorilerine göre arama yapma imkanı sunar.
 - **Görsel Arayüz:** Gradio tabanlı kullanıcı dostu bir web arayüzü.
 
+## 🧠 Yapay Zeka (AI) Kullanımı
+
+Bu projede yapay zeka teknolojileri, kullanıcı deneyimini zenginleştirmek ve daha isabetli öneriler sunmak amacıyla iki temel alanda kullanılmıştır:
+
+### 1. Embeddings (Vektör Gömme)
+Metinleri (kitap açıklamaları ve kullanıcı sorguları) matematiksel vektörlere dönüştürmek için kullanılır.
+- **Ne İçin Kullanıldı?** Klasik anahtar kelime eşleşmesi yerine **Semantik Arama (Anlamsal Arama)** yapabilmek için.
+- **Faydası:** Kullanıcı "uzayda geçen bir macera" yazdığında; içinde "uzay" kelimesi geçmese bile, konusu yıldızlararası seyahat veya galaksiler olan kitapları anlayıp önerebilir. ChromaDB ve varsayılan gömme modelleri bu işlevi üstlenir.
+
+### 2. LLM (Büyük Dil Modelleri)
+Kitapların içeriklerini analiz etmek ve sınıflandırmak için kullanılmıştır (Veri hazırlık aşamasında).
+- **Ne İçin Kullanıldı?** **Duygu Analizi (Sentiment Analysis)** ve metin sınıflandırma işlemleri için.
+- **Faydası:** Kitap açıklamaları LLM'ler tarafından analiz edilerek her kitaba "Neşe", "Üzüntü", "Korku", "Gerilim" gibi duygu etiketleri atanmıştır. Bu sayede kullanıcılar sadece konuya göre değil, **okumak istedikleri kitabın hissettireceği duyguya (Mood)** göre de filtreleme yapabilirler.
+
 ## 🛠️ Kurulum
 
 Projeyi yerel ortamınızda çalıştırmak için aşağıdaki adımları izleyin:
