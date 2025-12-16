@@ -2,9 +2,12 @@
 
 Bu proje, yapay zeka destekli bir kitap öneri sistemidir. Kullanıcının girdiği metin tabanlı açıklamalara, seçilen kategorilere ve istenen duygu durumuna (ton) göre en uygun kitapları önerir.
 
+**Önemli Not:** Bu proje tamamen **yerel** olarak çalışır ve herhangi bir harici API anahtarına (OpenAI vb.) ihtiyaç duymaz.
+
 ## 🚀 Özellikler
 
 - **Semantik Arama:** Kullanıcının doğal dilde yazdığı açıklamalara göre (örn: "uzayda geçen macera") kitapları bulur.
+- **Yerel Embeddingler:** ChromaDB'nin varsayılan gömme modellerini (Sentence Transformers) kullanarak metinleri vektörleştirir. Ücretsiz ve hızlıdır.
 - **Duygu Analizi (Sentiment Analysis):** Kitapları "Mutlu", "Üzgün", "Korku", "Şaşırtıcı" gibi duygu durumlarına göre filtreler.
 - **Kategori Filtreleme:** Belirli kitap kategorilerine göre arama yapma imkanı sunar.
 - **Görsel Arayüz:** Gradio tabanlı kullanıcı dostu bir web arayüzü.
@@ -33,12 +36,6 @@ Projeyi yerel ortamınızda çalıştırmak için aşağıdaki adımları izleyi
    pip install -r requirements.txt
    ```
 
-4. **Çevresel Değişkenleri Ayarlayın:**
-   `.env` dosyası oluşturun ve OpenAI API anahtarınızı ekleyin:
-   ```
-   OPENAI_API_KEY=sk-proj-...
-   ```
-
 ## ▶️ Kullanım
 
 Uygulamayı başlatmak için terminalde şu komutu çalıştırın:
@@ -53,8 +50,7 @@ Tarayıcınızda açılan yerel adres (genellikle `http://127.0.0.1:7860`) üzer
 
 - **Python**: Ana programlama dili.
 - **LangChain**: LLM uygulamaları geliştirmek için framework.
-- **ChromaDB**: Vektör veritabanı.
-- **OpenAI Embeddings**: Metinleri vektörlere dönüştürmek için.
+- **ChromaDB**: Vektör veritabanı ve yerel embedding motoru.
 - **Gradio**: Web arayüzü oluşturmak için.
 - **Pandas & NumPy**: Veri işleme için.
 
